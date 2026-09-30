@@ -44,7 +44,7 @@ El agente tiene **dos motores** y elige uno automáticamente con una heurística
 
 ## Estado de las pruebas ya corridas (evidencia real)
 
-Tres pruebas ejecutadas de punta a punta desde Telegram contra el motor **⚡ local**:
+**Dos** pruebas ejecutadas de punta a punta desde Telegram contra el motor **⚡ local**, y una tercera (comparación con 🧠 Claude) todavía **pendiente**:
 
 | # | Tarea | Resultado | Veredicto |
 |---|---|---|---|
