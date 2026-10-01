@@ -890,7 +890,7 @@ Completar después de cada ejecución.
 |---|---|---|---|---|---|---|---|---|
 | 0 | Contador de líneas | ⚡ Local | ⚡ Local | ✅ acertó | 46.0s | salida `3` | ✅ PASS | Verificado en vivo: devuelve `3`, rama `bot/20261001-114029`, sin commit previo a la aprobación |
 | 1 | Resumen de tiempos JSON | ⚡ Local | ⚡ Local | ✅ acertó | 44.2s / 45.0s | `3 / 8.5` | ✅ **PASS (2/2)** | **Refuta la predicción**: en ambas corridas el local descartó booleanos (`and not isinstance(x, bool)`); 2ª corrida incluso extrajo un helper `is_valid_time`. Capacidad estable confirmada |
-| 2 | Resumen staged + tests | 🧠 Claude | | ❌ fallo esperado | | unittest + 2 archivos | ⬜ | |
+| 2 | Resumen staged + tests | 🧠 Claude | — (no entró al agente) | ❌ **FALLO DE INTAKE** | — | unittest + 2 archivos | ❌ FAIL (intake) | `looks_like_dev` NO reconoció la tarea: el nombre de archivo partió la frase (`"un script diff_resumen.py que"` ≠ `"un script que"`). Cayó al chat normal → NO creó repo, rama ni diff; solo pegó código (roto) en un mensaje. Fallo en una etapa ANTERIOR al router. Reintento vía `/dev` para probar `recommend_engine` |
 | 3 | repo_guard | 🧠 Claude | | ✅ esperado | | tests + detección `.env` | ⬜ | |
 | 4 | Sanitizador de logs | 🧠 Claude | | ✅ esperado | | regresión completa | ⬜ | |
 | 5 | Inspector YAML | 🧠 Claude | | ✅ esperado | | instalación limpia + salida | ⬜ | |
