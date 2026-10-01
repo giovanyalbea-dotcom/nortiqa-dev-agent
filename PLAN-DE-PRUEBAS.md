@@ -888,7 +888,7 @@ Completar después de cada ejecución.
 
 | Nivel | Herramienta | Motor recomendado | Motor elegido | Heurística | Tiempo | Criterio objetivo | Resultado | Observaciones |
 |---|---|---|---|---|---|---|---|---|
-| 0 | Contador de líneas | ⚡ Local | | ✅ esperado | | salida `3` | ⬜ | |
+| 0 | Contador de líneas | ⚡ Local | ⚡ Local | ✅ acertó | 46.0s | salida `3` | ✅ PASS | Verificado en vivo: devuelve `3`, rama `bot/20261001-114029`, sin commit previo a la aprobación |
 | 1 | Resumen de tiempos JSON | ⚡ Local | | ✅ esperado | | `3 / 8.5` | ⬜ | |
 | 2 | Resumen staged + tests | 🧠 Claude | | ❌ fallo esperado | | unittest + 2 archivos | ⬜ | |
 | 3 | repo_guard | 🧠 Claude | | ✅ esperado | | tests + detección `.env` | ⬜ | |
