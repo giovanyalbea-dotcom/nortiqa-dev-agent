@@ -889,7 +889,7 @@ Completar después de cada ejecución.
 | Nivel | Herramienta | Motor recomendado | Motor elegido | Heurística | Tiempo | Criterio objetivo | Resultado | Observaciones |
 |---|---|---|---|---|---|---|---|---|
 | 0 | Contador de líneas | ⚡ Local | ⚡ Local | ✅ acertó | 46.0s | salida `3` | ✅ PASS | Verificado en vivo: devuelve `3`, rama `bot/20261001-114029`, sin commit previo a la aprobación |
-| 1 | Resumen de tiempos JSON | ⚡ Local | ⚡ Local | ✅ acertó | 44.2s | `3 / 8.5` | ✅ PASS (1/1) | **Contradice la predicción**: el local SÍ descartó booleanos (`and not isinstance(item, bool)`). Da `cantidad=3, promedio=8.5`. Conviene repetir para 2/2 (temp=0.1 no es determinista) |
+| 1 | Resumen de tiempos JSON | ⚡ Local | ⚡ Local | ✅ acertó | 44.2s / 45.0s | `3 / 8.5` | ✅ **PASS (2/2)** | **Refuta la predicción**: en ambas corridas el local descartó booleanos (`and not isinstance(x, bool)`); 2ª corrida incluso extrajo un helper `is_valid_time`. Capacidad estable confirmada |
 | 2 | Resumen staged + tests | 🧠 Claude | | ❌ fallo esperado | | unittest + 2 archivos | ⬜ | |
 | 3 | repo_guard | 🧠 Claude | | ✅ esperado | | tests + detección `.env` | ⬜ | |
 | 4 | Sanitizador de logs | 🧠 Claude | | ✅ esperado | | regresión completa | ⬜ | |
